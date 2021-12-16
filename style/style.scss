@@ -36,6 +36,7 @@ body{
     padding: 20px 30px;
     border-radius: 10px;
     background-color:$Dark-blue;
+    width: auto;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     &:hover{background-color:$Desaturated-blue;}
@@ -71,18 +72,20 @@ body{
         display:grid;
         background-color:$Blue;
         border-radius: 10px;
-        span{font-size: .8em;margin-bottom: 10px;}
+        .text{
+            span{font-size: .8em;margin-bottom: 10px;}
+            .name{
+                font-size: 2.2em;
+                margin-top: 0px;
+                margin-bottom: 30px;
+                font-weight: 200;
+            }
+        }
         img{
             max-width: 80px; 
             border: 3.5px solid white; 
             border-radius: 50%;
             margin-bottom: 20px;
-        }
-        .name{
-            font-size: 2.2em;
-            margin-top: 0px;
-            margin-bottom: 30px;
-            font-weight: 200;
         }
     }
     .btns{
@@ -135,4 +138,40 @@ body{
     background-size: 60px;
     background-position: 160px -10px;
 
+}
+
+
+@media  screen and (max-width:376px) {
+    body{
+        padding: 60px 25px;
+    }
+    .item{
+        margin: 30px 0;
+    }
+    .container{
+        display: block;
+    }
+    .report{
+        .profile{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            img{
+                margin-bottom: 0;
+            }
+            .text{
+                .name{
+                    font-size:1.5em ;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .btns{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .time{}
 }

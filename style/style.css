@@ -21,6 +21,14 @@ body {
   color: rgba(255, 255, 255, 0.473);
 }
 
+.hard {
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
 body {
   background-color: #0f1424;
   padding: 70px 140px 0 140px;
@@ -93,6 +101,7 @@ body {
   padding: 20px 30px;
   border-radius: 10px;
   background-color: #1c1f4a;
+  width: auto;
   cursor: pointer;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -146,9 +155,16 @@ body {
   border-radius: 10px;
 }
 
-.report .profile span {
+.report .profile .text span {
   font-size: .8em;
   margin-bottom: 10px;
+}
+
+.report .profile .text .name {
+  font-size: 2.2em;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-weight: 200;
 }
 
 .report .profile img {
@@ -156,13 +172,6 @@ body {
   border: 3.5px solid white;
   border-radius: 50%;
   margin-bottom: 20px;
-}
-
-.report .profile .name {
-  font-size: 2.2em;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  font-weight: 200;
 }
 
 .report .btns {
@@ -226,5 +235,45 @@ body {
   background-image: url(../images/icon-self-care.svg);
   background-size: 60px;
   background-position: 160px -10px;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    padding: 60px 25px;
+  }
+  .item {
+    margin: 30px 0;
+  }
+  .container {
+    display: block;
+  }
+  .report .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .report .profile img {
+    margin-bottom: 0;
+  }
+  .report .profile .text .name {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  .report .btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=style.css.map */
